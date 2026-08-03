@@ -1,332 +1,62 @@
-/* ==========================================================
-   12StartUp Website
-   Version 1.0
-   ========================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-:root {
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: #f7f8fa;
+    color: #222;
+    line-height: 1.7;
+}
 
-    --background: #f6f8fb;
-    --surface: #ffffff;
+.container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 24px;
+}
 
-    --text: #1f2937;
-    --text-secondary: #6b7280;
+h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
 
-    --primary: #2e7d32;
-    --primary-hover: #1b5e20;
+.subtitle {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 40px;
+}
 
-    --border: #e5e7eb;
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 
-    --shadow:
-        0 10px 30px rgba(0,0,0,.08);
+.links a {
+    text-decoration: none;
+    color: #1565c0;
+    font-size: 18px;
+}
 
-    --radius: 18px;
-
-    --content-width: 860px;
-
+.links a:hover {
+    text-decoration: underline;
 }
 
 @media (prefers-color-scheme: dark) {
 
-    :root {
-
-        --background: #171717;
-        --surface: #232323;
-
-        --text: #f5f5f5;
-        --text-secondary: #b3b3b3;
-
-        --primary: #6ac46f;
-        --primary-hover: #8be58d;
-
-        --border: #353535;
-
-        --shadow:
-            0 12px 32px rgba(0,0,0,.45);
-
-    }
-
-}
-
-/* ========================================================== */
-
-*,
-*::before,
-*::after {
-
-    box-sizing: border-box;
-
-}
-
-html {
-
-    scroll-behavior: smooth;
-
-}
-
-body {
-
-    margin: 0;
-
-    background: var(--background);
-
-    color: var(--text);
-
-    font-family:
-
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
-
-    line-height: 1.75;
-
-    font-size: 18px;
-
-}
-
-/* ========================================================== */
-
-.container {
-
-    width: min(
-        calc(100% - 40px),
-        var(--content-width)
-    );
-
-    margin: 70px auto;
-
-    background: var(--surface);
-
-    border-radius: var(--radius);
-
-    padding: 48px;
-
-    box-shadow: var(--shadow);
-
-}
-
-/* ========================================================== */
-
-h1 {
-
-    margin-top: 0;
-
-    margin-bottom: 12px;
-
-    font-size: clamp(38px, 5vw, 54px);
-
-    line-height: 1.15;
-
-}
-
-h2 {
-
-    margin-top: 50px;
-
-    margin-bottom: 18px;
-
-    font-size: 28px;
-
-}
-
-h3 {
-
-    margin-top: 36px;
-
-}
-
-.subtitle {
-
-    color: var(--text-secondary);
-
-    font-size: 21px;
-
-    margin-bottom: 40px;
-
-}
-
-/* ========================================================== */
-
-p {
-
-    margin: 0 0 18px;
-
-}
-
-strong {
-
-    font-weight: 600;
-
-}
-
-/* ========================================================== */
-
-ul {
-
-    margin: 20px 0;
-
-    padding-left: 24px;
-
-}
-
-li {
-
-    margin-bottom: 10px;
-
-}
-
-/* ========================================================== */
-
-a {
-
-    color: var(--primary);
-
-    text-decoration: none;
-
-    transition: .2s;
-
-}
-
-a:hover {
-
-    color: var(--primary-hover);
-
-}
-
-/* ========================================================== */
-
-.links {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 18px;
-
-    margin-top: 42px;
-
-}
-
-.links a {
-
-    display: block;
-
-    padding: 18px 22px;
-
-    background: var(--background);
-
-    border: 1px solid var(--border);
-
-    border-radius: 14px;
-
-    font-weight: 600;
-
-    transition:
-        transform .18s ease,
-        border-color .18s ease,
-        box-shadow .18s ease;
-
-}
-
-.links a:hover {
-
-    transform: translateY(-2px);
-
-    border-color: var(--primary);
-
-    box-shadow: 0 8px 20px rgba(0,0,0,.08);
-
-}
-
-/* ========================================================== */
-
-.back {
-
-    display: inline-block;
-
-    margin-bottom: 30px;
-
-    color: var(--text-secondary);
-
-}
-
-/* ========================================================== */
-
-footer {
-
-    margin-top: 60px;
-
-    padding-top: 30px;
-
-    border-top: 1px solid var(--border);
-
-    color: var(--text-secondary);
-
-    font-size: 15px;
-
-}
-
-/* ========================================================== */
-
-hr {
-
-    border: 0;
-
-    border-top: 1px solid var(--border);
-
-    margin: 40px 0;
-
-}
-
-/* ========================================================== */
-
-.card {
-
-    margin-top: 24px;
-
-    padding: 24px;
-
-    background: var(--background);
-
-    border: 1px solid var(--border);
-
-    border-radius: 14px;
-
-}
-
-/* ========================================================== */
-
-@media (max-width: 700px) {
-
-    .container {
-
-        margin: 20px auto;
-
-        padding: 28px;
-
-    }
-
     body {
-
-        font-size: 17px;
-
-    }
-
-    h2 {
-
-        margin-top: 40px;
-
-        font-size: 24px;
-
+        background: #1b1b1b;
+        color: #f2f2f2;
     }
 
     .subtitle {
+        color: #bbbbbb;
+    }
 
-        font-size: 19px;
-
+    .links a {
+        color: #6ea8ff;
     }
 
 }
